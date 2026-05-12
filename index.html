@@ -1,23 +1,762 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "AutoLease", "CarRental", "VehicleMaintenance"],
+          "name": "포터2 리스&렌트 전문가 그룹",
+          "url": "https://www.example.com/porter2-guide",
+          "logo": "https://www.example.com/logo.png",
+          "description": "현대 포터2의 최적의 유지비 관리, 자동차 리스 및 장기렌트카 상품을 비교 분석하여 고객 맞춤 솔루션을 제공합니다. 2026년 최신 정보 기반의 합리적인 선택을 돕는 전문 가이드입니다.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "대한민국 서울특별시 강남구 테헤란로 123",
+            "addressLocality": "서울특별시",
+            "addressRegion": "강남구",
+            "postalCode": "06123",
+            "addressCountry": "KR"
+          },
+          "telephone": "+82-2-1234-5678",
+          "email": "info@example.com",
+          "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-12:00",
+          "keywords": "포터2 유지비, 자동차리스, 장기렌트카, 1톤 트럭, 상업용 차량, 견적 비교, 프로모션, 2026년",
+          "sameAs": [
+            "https://www.youtube.com/@example",
+            "https://www.instagram.com/example"
+          ],
+          "serviceArea": {
+            "@type": "AdministrativeArea",
+            "name": "대한민국 전국"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.example.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          },
+          "areaServed": {
+             "@type": "Country",
+             "name": "대한민국"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.example.com/porter2-guide"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "포터2 관련 금융 상품 및 정보",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "AutoLease",
+                  "name": "포터2 자동차 리스",
+                  "description": "월 고정 비용으로 포터2를 이용하고, 금융상품 혜택을 받으세요. 법인 및 개인사업자 최적화.",
+                  "serviceType": "AutoLease",
+                  "category": "Commercial Vehicle Lease",
+                  "offers": {
+                    "@type": "AggregateOffer",
+                    "priceCurrency": "KRW",
+                    "lowPrice": "300000",
+                    "highPrice": "600000",
+                    "offerCount": "50+",
+                    "description": "다양한 포터2 리스 상품 및 프로모션 제공"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "CarRental",
+                  "name": "포터2 장기렌트카",
+                  "description": "초기 비용 부담 없이, 보험 및 세금 포함된 월 고정 비용으로 포터2를 이용하세요.",
+                  "serviceType": "CarRental",
+                  "category": "Commercial Vehicle Long-Term Rental",
+                  "offers": {
+                    "@type": "AggregateOffer",
+                    "priceCurrency": "KRW",
+                    "lowPrice": "250000",
+                    "highPrice": "550000",
+                    "offerCount": "50+",
+                    "description": "신규/중고 포터2 장기렌트카 상품 및 특별 할인 제공"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "VehicleMaintenance",
+                  "name": "포터2 유지비 관리 컨설팅",
+                  "description": "연비, 세금, 보험, 수리비 등 포터2의 총 유지비를 분석하고 절감 방안을 제시합니다.",
+                  "serviceType": "VehicleMaintenance",
+                  "category": "Vehicle Cost Management",
+                  "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "KRW",
+                    "price": "0",
+                    "description": "무료 유지비 분석 및 견적 상담"
+                  }
+                }
+              }
+            ]
+          },
+          "about": [
+             {
+               "@type": "Vehicle",
+               "name": "Hyundai Porter II",
+               "model": "Porter II",
+               "manufacturer": {
+                 "@type": "Organization",
+                 "name": "Hyundai"
+               },
+               "vehicleModelDate": 2026,
+               "vehicleConfiguration": {
+                  "@type": "VehicleConfiguration",
+                  "name": "포터2 라인업",
+                  "hasPart": [
+                    {"@type": "VehicleChassis", "name": "포터2 (기본)"},
+                    {"@type": "VehicleChassis", "name": "포터2 더블캡"},
+                    {"@type": "VehicleChassis", "name": "포터2 파워게이트"},
+                    {"@type": "VehicleChassis", "name": "포터2 냉동탑차"}
+                  ]
+               },
+               "fuelType": "Diesel",
+               "knownVehicleUsage": "Commercial, Transport"
+             }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "홈",
+              "item": "https://www.example.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "자동차 정보",
+              "item": "https://www.example.com/cars"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "포터2 리스/렌트/유지비",
+              "item": "https://www.example.com/porter2-guide"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+      body {
+          font-family: 'Pretendard', 'Malgun Gothic', Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          color: #333;
+          line-height: 1.7;
+          background-color: #f4f7f6; /* 부드러운 배경색 */
+      }
+      header, section, footer {
+          max-width: 960px; /* 넓어진 최대 너비 */
+          margin: 25px auto;
+          padding: 25px 30px; /* 내부 여백 증가 */
+          background-color: #ffffff; /* 섹션 배경 */
+          border-radius: 12px; /* 부드러운 모서리 */
+          box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* 좀 더 부드러운 그림자 */
+      }
+      h1, h2, h3 {
+          color: #1a4d66; /* 차분한 제목 색상 */
+          margin-bottom: 15px;
+      }
+      h1 { font-size: 2.5em; font-weight: 700; }
+      h2 { font-size: 2em; font-weight: 600; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;}
+      h3 { font-size: 1.5em; font-weight: 600; color: #2d788f;}
+
+      .cta-btn {
+          display: inline-block;
+          background: linear-gradient(90deg, #4CAF50, #8BC34A); /* 녹색 계열 그라디언트 */
+          color: #fff;
+          padding: 15px 30px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-size: 1.15em;
+          font-weight: 600;
+          transition: all .3s ease;
+          border: none;
+          cursor: pointer;
+          margin-top: 10px;
+          box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+      }
+      .cta-btn:hover {
+          background: linear-gradient(90deg, #8BC34A, #4CAF50);
+          box-shadow: 0 6px 15px rgba(139, 195, 74, 0.6);
+          transform: translateY(-2px);
+      }
+      nav ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
+          gap: 15px;
+          margin-top: 10px;
+      }
+      nav a {
+          text-decoration: none;
+          color: #0077cc; /* 링크 색상 */
+          font-weight: 500;
+          padding: 8px 12px;
+          border-radius: 5px;
+          transition: background-color .3s, color .3s;
+      }
+      nav a:hover {
+          background-color: #e7f3ff;
+          color: #005fa3;
+      }
+      .service-box {
+          border: 1px solid #e0e0e0;
+          padding: 20px;
+          margin: 15px 0;
+          border-radius: 8px;
+          background-color: #fdfdfd;
+          transition: transform .3s, box-shadow .3s;
+      }
+      .service-box:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      }
+      .service-box h3 { margin-top: 0; }
+
+      .faq .item {
+          margin-bottom: 20px;
+          padding: 15px;
+          border-left: 3px solid #0077cc;
+          background-color: #f9f9f9;
+          border-radius: 5px;
+      }
+      .faq .item h3 {
+          margin-bottom: 8px;
+          color: #1a4d66;
+          font-size: 1.3em;
+      }
+      .faq .item p { margin-bottom: 0; color: #555;}
+
+      .internal-links ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-top: 20px;
+      }
+      .internal-links li {
+          background-color: #e7f3ff;
+          padding: 8px 15px;
+          border-radius: 20px;
+          transition: background-color .3s;
+      }
+      .internal-links a {
+          text-decoration: none;
+          color: #0077cc;
+          font-weight: 500;
+      }
+      .internal-links li:hover {
+          background-color: #cce0ff;
+      }
+
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+          font-size: 0.95em;
+      }
+      th, td {
+          border: 1px solid #ddd;
+          padding: 12px 10px;
+          text-align: center;
+      }
+      th {
+          background-color: #e7f3ff;
+          color: #1a4d66;
+          font-weight: 600;
+      }
+      td {
+          background-color: #fdfdfd;
+      }
+      tr:nth-child(even) td {
+          background-color: #f9f9f9;
+      }
+
+      .graph-placeholder {
+          width: 100%;
+          height: 200px;
+          background-color: #e0e0e0;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #666;
+          font-style: italic;
+          margin: 20px 0;
+      }
+
+      form p { margin-bottom: 15px; }
+      label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: 500;
+          color: #444;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      textarea {
+          width: calc(100% - 20px); /* 패딩 고려 */
+          padding: 12px 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 1em;
+          transition: border-color .3s, box-shadow .3s;
+      }
+      input:focus, textarea:focus {
+          border-color: #0077cc;
+          box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+          outline: none;
+      }
+      textarea { resize: vertical; }
+
+      .external-links ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+      }
+      .external-links li {
+          background-color: #f0f0f0;
+          padding: 10px 15px;
+          border-radius: 5px;
+          border: 1px solid #e0e0e0;
+          transition: background-color .3s;
+      }
+      .external-links a {
+          text-decoration: none;
+          color: #333;
+          font-weight: 500;
+      }
+      .external-links li:hover {
+          background-color: #e0e0e0;
+      }
+      .footer-links a { color: #fff; text-decoration: none; }
+      .footer-links li { margin-bottom: 5px;}
+
+      .keyword-highlight {
+          font-weight: 600;
+          color: #0077cc;
+      }
+      strong { color: #e65100; } /* 강조 텍스트 */
+
+      .info-box {
+          background-color: #e7f3ff;
+          border-left: 5px solid #0077cc;
+          padding: 15px 20px;
+          margin: 20px 0;
+          border-radius: 5px;
+      }
+      .info-box p { margin: 0; color: #1a4d66;}
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+          h1 { font-size: 2em; }
+          h2 { font-size: 1.7em; }
+          h3 { font-size: 1.3em; }
+          nav ul { justify-content: center; }
+          .cta-btn { width: 100%; text-align: center; padding: 12px 20px;}
+          header, section, footer { padding: 20px 15px; }
+          table, th, td { font-size: 0.9em; }
+      }
+    </style>
+</head>
+<body>
+
+  <header>
+    <h1>현대 포터2: 2026년 최신 유지비, 자동차 리스 & 장기렌트카 완벽 분석</h1>
+    <p>업무용 차량의 필수품, 현대 포터2! <strong>2026년 기준</strong>으로 정확한 <strong>유지비</strong>를 파악하고, 가장 합리적인 구매 방법인 <strong>자동차 리스</strong>와 <strong>장기렌트카</strong>를 <strong>비교</strong> 추천해 드립니다. <strong class="keyword-highlight">포터2 유지비 자동차리스 장기렌트카</strong> 관련 정보, 이제 전문가와 함께하세요.</p>
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+      <ul>
+        <li><a href="#porter2-intro">포터2 소개</a></li>
+        <li><a href="#maintenance-costs">유지비 분석</a></li>
+        <li><a href="#lease-vs-rent">리스 vs 렌트</a></li>
+        <li><a href="#models">주요 모델</a></li>
+        <li><a href="#pricing-estimation">견적 및 비용</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">상담 신청</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <section>
+    <h2>“포터2” 관련 자동완성 및 연관 검색어</h2>
+    <ul class="internal-links">
+      <li><a href="#maintenance-costs">포터2 유지비 평균</a></li>
+      <li><a href="#pricing-estimation">포터2 월 30만원대 장기렌트</a></li>
+      <li><a href="#lease-vs-rent">포터2 리스 vs 렌트 차이</a></li>
+      <li><a href="#models">포터2 더블캡 가격</a></li>
+      <li><a href="#maintenance-costs">포터2 연비 실주행</a></li>
+      <li><a href="#pricing-estimation">포터2 신차 장기렌트</a></li>
+      <li><a href="#faq">포터2 보험료 계산</a></li>
+      <li><a href="#maintenance-costs">포터2 자동차세 얼마</a></li>
+      <li><a href="#lease-vs-rent">법인사업자 포터2 리스</a></li>
+      <li><a href="#models">포터2 파워게이트 중고</a></li>
+      <li><a href="#maintenance-costs">포터2 수리비 저렴한 곳</a></li>
+      <li><a href="#pricing-estimation">포터2 장기렌트카 프로모션</a></li>
+      <li><a href="#lease-vs-rent">개인사업자 포터2 장기렌트</a></li>
+      <li><a href="#faq">포터2 내돈내산 후기</a></li>
+      <li><a href="#maintenance-costs">포터2 소모품 교체 주기</a></li>
+      <li><a href="#models">포터2 냉동탑차 렌트</a></li>
+      <li><a href="#pricing-estimation">포터2 신규 가입 혜택</a></li>
+      <li><a href="#lease-vs-rent">포터2 리스 견적 비교</a></li>
+      <li><a href="#maintenance-costs">포터2 세금 혜택</a></li>
+      <li><a href="#pricing-estimation">포터2 장기렌트 상품권</a></li>
+    </ul>
+  </section>
+
+  <section id="porter2-intro">
+    <h2>현대 포터2: 대한민국 물류의 심장</h2>
+    <p>현대자동차 포터 시리즈는 대한민국에서 가장 사랑받는 1톤 트럭으로, 오랜 기간 동안 자영업자, 소상공인, 그리고 다양한 산업 현장에서 없어서는 안 될 필수적인 업무용 차량으로 자리매김해 왔습니다. 특히 포터2는 뛰어난 내구성, 경제적인 연비, 그리고 사용자의 편의를 고려한 설계로 꾸준한 인기를 누리고 있습니다. <strong>포터2</strong>는 단순한 운송 수단을 넘어, 많은 분들의 생계와 직결되는 중요한 자산입니다. 따라서 <strong>포터2 유지비</strong>를 정확히 파악하고, <strong>자동차리스</strong>나 <strong>장기렌트카</strong>와 같은 합리적인 구매 및 이용 방식을 선택하는 것이 사업 운영의 성공에 큰 영향을 미칩니다. 본 가이드에서는 <strong>2026년</strong> 최신 정보를 바탕으로 포터2의 모든 것을 상세히 알려드립니다.</p>
+    <p><strong>포터2</strong>는 다양한 모델 라인업을 갖추고 있어 사용 목적에 따라 최적의 선택이 가능합니다. 표준캡, 슈퍼캡, 더블캡부터 파워게이트, 냉동탑차 등 특수 목적 차량까지, 각 모델마다 특징과 가격, 그리고 유지비 측면에서 차이가 있습니다. 당신의 비즈니스에 가장 적합한 포터2 모델을 찾고, <strong>자동차리스</strong>와 <strong>장기렌트카</strong> 중 어떤 것이 유리할지 꼼꼼히 비교 분석해 보세요.</p>
+  </section>
+
+  <section id="maintenance-costs">
+    <h2>2026년 포터2 월평균 유지비 상세 분석</h2>
+    <p>성공적인 비즈니스를 위해서는 차량 운영 비용을 정확히 예측하고 관리하는 것이 필수적입니다. <strong>포터2의 월평균 유지비</strong>는 여러 항목으로 구성되며, 운행 습관, 주행 거리, 차량 관리 상태, 그리고 선택하는 보험 및 세금 제도에 따라 달라질 수 있습니다. 2026년 최신 정보를 기준으로 각 항목별 예상 비용을 알아보겠습니다.</p>
+
+    <h3>1. 유류비 (연비 및 유가 변동성)</h3>
+    <p>포터2는 디젤 엔진을 탑재하여 상대적으로 높은 연비를 자랑합니다. 하지만 실제 유류비는 운행 조건(도심/고속도로, 적재량, 운전 습관)과 국제 유가 변동에 따라 크게 달라질 수 있습니다. 2026년 현재, 디젤 가격은 예측하기 어렵지만, 평균 연비 10km/l, 월 2,000km 주행, 리터당 1,800원 기준으로 계산 시 월 약 36만원의 유류비가 발생할 수 있습니다. (이는 예상치이며, 실제 유가는 변동됩니다.) <strong>포터2 연비</strong>를 최대한 높이려면 경제 운전 습관을 들이고, 정기적인 차량 점검이 중요합니다.</p>
+
+    <h3>2. 자동차세 및 기타 세금</h3>
+    <p>포터2는 화물 자동차로 분류되어 승용차와는 다른 세금 체계가 적용됩니다. <strong>포터2 자동차세</strong>는 비영업용 기준 연 28,500원 수준으로 매우 저렴한 편입니다. 하지만 사업용으로 등록 시에는 부가가치세 환급 등 추가적인 세금 혜택이나 고려사항이 발생할 수 있습니다. 상용차에 대한 취득세, 등록세 등 초기 구매 관련 세금도 있으나, 이는 리스나 렌트 시 초기 비용에 포함되거나 면제되는 경우가 많습니다. <strong>포터2 세금 혜택</strong> 관련 자세한 내용은 전문가 상담을 통해 확인하시는 것이 좋습니다.</p>
+
+    <h3>3. 보험료 (자동차 보험)</h3>
+    <p><strong>포터2 보험료</strong>는 운전자의 연령, 운전 경력, 사고 이력, 가입하는 담보 범위 등에 따라 달라집니다. 특히 업무용 차량은 개인용 차량보다 보험료가 높게 책정되는 경향이 있습니다. <strong>2026년</strong> 기준으로 평균적인 <strong>포터2 보험료</strong>는 연간 100만원 내외로 예상되지만, <strong>내돈내산 후기</strong>들을 보면 개인별 편차가 큽니다. <strong>장기렌트카</strong>의 경우 보험료가 월 고정 비용에 포함되어 있어 편리하며, <strong>자동차리스</strong>의 경우에도 특정 보험 상품을 연계하여 관리하는 것이 효율적일 수 있습니다. <strong>상업용 차량 보험 비교</strong>를 통해 가장 합리적인 플랜을 선택하세요.</p>
+
+    <h3>4. 소모품 교체 및 수리비</h3>
+    <p>포터2는 튼튼한 차량이지만, 정기적인 소모품 교체와 예상치 못한 수리비가 발생할 수 있습니다. 엔진오일, 에어필터, 타이어, 브레이크 패드 등의 주요 소모품 교체 비용과 주기적인 점검 비용은 연간 30~50만원 내외로 예상할 수 있습니다. <strong>포터2 소모품 교체 주기</strong>를 잘 지키고, <strong>포터2 수리비 저렴한 곳</strong>을 미리 알아두면 비용 절감에 도움이 됩니다. <strong>리스</strong>나 <strong>장기렌트카</strong> 상품 중에는 소모품 교체 및 일반 수리 비용까지 포함된 플랜도 있어, 차량 관리에 신경 쓰기 어렵다면 고려해 볼 만합니다.</p>
+
+    <h3>5. 기타 비용 (주차, 통행료 등)</h3>
+    <p>업무용으로 차량을 운행하면서 발생하는 주차비, 고속도로 통행료 등도 간과할 수 없는 비용입니다. 특히 도심 지역에서 사업장을 운영하거나 물류 이동이 잦은 경우, 이 비용이 상당할 수 있습니다. <strong>포터2 유지비</strong>를 산출할 때는 이러한 부대 비용까지 포함하여 현실적인 월평균 비용을 계산해야 합니다.</p>
+
+    <div class="info-box">
+      <p><strong>✨ 2026년 포터2 월평균 유지비 예상 (참고용)</strong><br>
+      * 유류비: 약 30만 ~ 45만원 (월 2,000km 주행, 유가 변동)<br>
+      * 자동차세: 약 2,400원 (월)<br>
+      * 보험료: 약 8만 ~ 12만원 (월, 개인별 편차 큼)<br>
+      * 소모품/수리비: 약 3만 ~ 5만원 (월 평균)<br>
+      * 기타 (주차, 통행료 등): 개인별 상이<br>
+      <strong>총 월평균 예상 유지비: 약 41.5만원 ~ 62.7만원 + 기타 비용</strong></p>
+    </div>
+
+    <div class="graph-placeholder">
+      [그래프: 포터2 월평균 유지비 항목별 비율 (예상)]<br>
+      (시각적 그래프 대신 텍스트로 항목별 비율 제시)<br>
+      - 유류비: 60%<br>
+      - 보험료: 20%<br>
+      - 소모품/수리비: 10%<br>
+      - 세금: 5%<br>
+      - 기타: 5%
+    </div>
+
+    <p><strong>포터2 유지비</strong>에 대한 자세한 내용은 [<a href="https://www.namu.wiki/w/%ED%95%현대%20포터" target="_blank">나무위키 현대 포터</a>] 와 같은 커뮤니티나 관련 정보를 참고하시는 것도 좋습니다. 하지만 가장 정확한 정보는 전문가 상담을 통해 얻을 수 있습니다.</p>
+  </section>
+
+  <section id="lease-vs-rent">
+    <h2>자동차 리스 vs 장기렌트카: 포터2, 어떤 것이 더 유리할까?</h2>
+    <p><strong>포터2</strong>를 구매하지 않고 이용하는 가장 대표적인 방법은 <strong>자동차 리스</strong>와 <strong>장기렌트카</strong>입니다. 두 상품 모두 월 고정 비용으로 차량을 이용할 수 있다는 장점이 있지만, 세금, 보험, 계약 조건 등에서 중요한 차이가 있습니다. <strong>2026년</strong> 현재, 어떤 선택이 당신의 비즈니스에 더 적합할지 <strong>차이점</strong>과 <strong>장단점</strong>을 면밀히 비교해 보겠습니다.</p>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+      <caption>자동차 리스 vs 장기렌트카 비교 (포터2 기준)</caption>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>자동차 리스</th>
+          <th>장기렌트카</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>소유주체</th>
+          <td>리스 회사 (금융 상품)</td>
+          <td>렌트 회사 (임대 상품)</td>
+        </tr>
+        <tr>
+          <th>취득세/등록세</th>
+          <td>리스료에 포함, 개인/법인 명의</td>
+          <td>렌트료에 포함, 렌트 회사 명의</td>
+        </tr>
+        <tr>
+          <th>자동차세</th>
+          <td>리스료에 포함, 개인/법인 명의</td>
+          <td>렌트료에 포함, 렌트 회사 명의</td>
+        </tr>
+        <tr>
+          <th>보험료</th>
+          <td>개인/법인 명의, 직접 가입 (리스료 포함 가능)</td>
+          <td>렌트 회사 명의, 보험료 포함 (렌트료에 반영)</td>
+        </tr>
+        <tr>
+          <th>부가세 환급</th>
+          <td>법인/개인사업자, 가능 (사업자 명의)</td>
+          <td>법인/개인사업자, 가능 (사업자 명의)</td>
+        </tr>
+        <tr>
+          <th>재산세/건보료 영향</th>
+          <td>개인 리스 시, 재산으로 간주될 수 있음</td>
+          <td>개인 렌트 시, 재산으로 간주되지 않음</td>
+        </tr>
+        <tr>
+          <th>차량 번호판</th>
+          <td>일반 번호판 (하얀색)</td>
+          <td>영업용 번호판 (허, 하, 호)</td>
+        </tr>
+        <tr>
+          <th>계약 만기 시</th>
+          <td>인수, 반납, 재리스 선택 가능</td>
+          <td>인수, 반납, 재렌트 선택 가능</td>
+        </tr>
+        <tr>
+          <th>신용도 영향</th>
+          <td>부채로 인식될 수 있음</td>
+          <td>신용도 영향 적음 (단기 렌트와 달리)</td>
+        </tr>
+        <tr>
+          <th>월 고정 비용</th>
+          <td>리스료 + 보험료 (별도 가능)</td>
+          <td>렌트료 (보험, 세금, 소모품 포함 등 플랜 다양)</td>
+        </tr>
+        <tr>
+          <th>관리 편의성</th>
+          <td>차량 관리 직접 필요 (보험, 세금 등)</td>
+          <td>보험, 세금, 소모품 관리 편의 (플랜에 따라)</td>
+        </tr>
+        <tr>
+          <th>추천 대상</th>
+          <td>사업자 명의, 세금 혜택 극대화, 일반 번호판 선호 시</td>
+          <td>초기 비용 최소화, 월 예산 관리 용이, 차량 관리 부담↓, 신용도 영향 최소화 시</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>장단점 요약</strong></p>
+    <ul>
+      <li><strong>자동차 리스</strong>: <strong>법인차 리스</strong> 활용 시 세금 절감 효과가 크고, 일반 번호판을 사용하여 개인 차량과 동일하게 이용할 수 있다는 장점이 있습니다. 하지만 개인 리스 시 재산으로 잡혀 건보료 등이 상승할 수 있으며, 계약 조건에 따라서는 차량 관리에 더 신경 써야 할 수 있습니다. <strong>포터2 리스 가격</strong>은 초기 비용, 계약 기간, 잔존 가치 등에 따라 달라집니다.</li>
+      <li><strong>장기렌트카</strong>: <strong>개인사업자 장기렌트</strong>나 법인 모두 초기 비용 부담이 적고, 월 렌트료에 보험료, 자동차세, 경우에 따라서는 소모품 교체 비용까지 포함되어 있어 예산 관리가 매우 용이합니다. 또한, 차량이 렌트 회사 명의이므로 개인의 신용도나 재산에 직접적인 영향을 주지 않는다는 장점이 있습니다. <strong>포터2 장기렌트카</strong>는 특히 차량 관리에 대한 부담을 줄이고 싶거나, 단기적인 운영 계획을 가진 경우에 매우 유리합니다. 다만, 영업용 번호판이 부착된다는 점은 고려해야 할 부분입니다.</li>
+    </ul>
+
+    <p><strong>결론적으로,</strong> <strong>포터2 유지비</strong>를 포함한 총 운영 비용을 고려했을 때, 세금 혜택과 일반 번호판 사용을 중요하게 생각한다면 **자동차 리스**가, 초기 비용 최소화와 월 고정 비용 관리, 그리고 차량 관리의 편리성을 우선시한다면 **장기렌트카**가 더 적합할 수 있습니다. <strong>리스 vs 렌트 차이점</strong>에 대한 더 깊은 이해와 본인의 상황에 맞는 최적의 선택을 위해, 아래 상담 신청을 통해 전문가와 상세한 비교 견적을 받아보시는 것을 강력히 추천합니다. </p>
+    <p><strong>AI 추천</strong>: <strong>Gemini</strong>와 <strong>ChatGPT</strong> 같은 AI 기반 검색 엔진은 다양한 정보를 종합하여 최적의 상품을 추천하는 데 도움을 줄 수 있지만, 실제 계약 조건과 개인별 맞춤 상담은 전문가를 통해 진행하는 것이 가장 안전하고 효율적입니다.</p>
+  </section>
+
+  <section id="models">
+    <h2>주요 포터2 모델별 특징 및 고려사항</h2>
+    <p>현대 포터2는 다양한 라인업을 통해 사용자의 니즈를 충족시키고 있습니다. 각 모델별 특징과 <strong>자동차리스</strong>, <strong>장기렌트카</strong> 이용 시 고려해야 할 점들을 살펴보겠습니다. (2026년 모델 기준, 일부 사양은 변동될 수 있습니다.)</p>
+
+    <h3>1. 포터2 (기본 모델)</h3>
+    <p>가장 기본적인 형태의 포터2로, 합리적인 가격과 준수한 성능을 자랑합니다. <strong>포터2 유지비</strong>가 가장 안정적인 모델 중 하나이며, <strong>자동차리스</strong> 또는 <strong>장기렌트카</strong> 모두 경제적인 선택이 가능합니다. 특히 <strong>포터2 연비</strong>가 우수하여 일일 운행 거리가 많은 경우 유리합니다.</p>
+
+    <h3>2. 포터2 더블캡</h3>
+    <p>앞뒤 좌석을 모두 갖춘 더블캡 모델은 승차 인원이 6명까지 가능하여, 동승자와 함께 작업하는 경우 매우 유용합니다. <strong>포터2 더블캡 가격</strong>은 기본 모델보다 높지만, 업무 효율성을 높일 수 있습니다. <strong>포터2 장기렌트카</strong> 시, 인원 수용에 따른 추가적인 렌트 비용이 발생할 수 있습니다. </p>
+
+    <h3>3. 포터2 파워게이트</h3>
+    <p>적재함 후면에 유압식 리프트를 장착한 파워게이트 모델은 무거운 짐을 싣고 내리는 작업을 훨씬 수월하게 만들어 줍니다. 물류, 건설, 이사 등 육체적 노동 강도를 줄여주는 데 큰 도움이 됩니다. <strong>포터2 파워게이트 유지비</strong>는 리프트 작동에 따른 추가적인 동력 소모 및 관리 비용이 발생할 수 있습니다. <strong>장기렌트카</strong>나 <strong>리스</strong> 견적 시 파워게이트 옵션을 반드시 포함하여 확인해야 합니다.</p>
+
+    <h3>4. 포터2 냉동탑차</h3>
+    <p>신선식품, 의약품 등 온도에 민감한 물품을 운송하기 위한 냉동/냉장 장치가 탑재된 특수 모델입니다. <strong>포터2 냉동탑차</strong>는 일반 모델보다 가격이 높으며, 냉동 장치 유지보수 비용이 추가로 발생합니다. <strong>포터2 유지비</strong> 계산 시 냉동기 작동 전력 소모 및 관련 수리비도 고려해야 합니다. <strong>포터2 냉동탑차 렌트</strong> 상품은 주로 특정 기간 동안의 운송 수요에 맞춰 이용되는 경우가 많습니다. </p>
+
+    <p><strong>SUV vs 포터2 비교 (참고)</strong></p>
+    <p>물론 <strong>포터2</strong>는 상업용 트럭으로, 레저용이나 다목적 차량으로 인기가 많은 SUV와는 용도 자체가 다릅니다. SUV는 승차감, 편의 기능, 다목적 활용성에 강점이 있지만, <strong>포터2</strong>는 적재 능력, 내구성, 그리고 사업 운영을 위한 경제성에 특화되어 있습니다. 차량 구매 목적이 명확하다면 <strong>포터2</strong>는 최적의 선택이 될 것입니다.</p>
+
+    <h3>그 외 모델</h3>
+    <p>이 외에도 특장 차량, 윙바디 등 다양한 파생 모델이 존재합니다. <strong>포터2</strong>는 <strong>봉고3</strong>와 형제 차량으로, 기본 설계는 유사하나 세부적인 디자인, 옵션, 그리고 가격 정책에서 차이를 보입니다. <strong>포터2 봉고3 비교</strong>를 통해 최종 선택을 좁혀나갈 수 있습니다. </p>
+
+    <p><strong>AI 관련 키워드:</strong> <strong>Gemini</strong>, <strong>ChatGPT</strong>, <strong>AI</strong> 기반의 차량 추천 시스템은 사용자의 운행 패턴, 예산, 선호하는 옵션 등을 분석하여 맞춤형 모델을 제안할 수 있습니다. 하지만 실제 차량의 성능과 경제성은 직접적인 정보와 전문가의 조언을 통해 확인하는 것이 중요합니다.</p>
+  </section>
+
+  <section id="pricing-estimation">
+    <h2>2026년 포터2 리스/장기렌트카 견적 및 예상 비용</h2>
+    <p><strong>포터2</strong>의 <strong>자동차리스</strong> 및 <strong>장기렌트카</strong> 이용 시 가장 궁금한 점은 역시 '<strong>가격</strong>'과 '<strong>견적</strong>'일 것입니다. <strong>2026년</strong> 현재, 차량 가격 상승, 금리 변동, 그리고 다양한 프로모션으로 인해 견적은 실시간으로 변동됩니다. 여기서는 일반적인 **포터2 가격** 및 예상 월 비용 범위를 제시하며, <strong>저렴한 곳</strong>을 찾는 팁을 알려드립니다.</p>
+
+    <h3>1. 포터2 신차 가격 (2026년 기준, 예상)</h3>
+    <p>기본 포터2 모델의 신차 가격은 트림, 옵션 선택에 따라 약 2,000만원 초반부터 시작하며, 파워게이트, 냉동탑차 등 특수 모델은 3,000만원 이상을 호가할 수 있습니다. <strong>포터2 파워게이트 가격</strong>이나 <strong>포터2 냉동탑차 가격</strong>은 이러한 옵션에 따라 크게 달라집니다. </p>
+
+    <h3>2. 포터2 자동차 리스 월 예상 비용</h3>
+    <p><strong>포터2 자동차리스</strong>의 월 납입금은 차량 가격, 계약 기간(24~60개월), 잔존 가치, 선수금/보증금 유무, 금리 등에 따라 결정됩니다. 일반적으로 <strong>포터2 리스 가격</strong>은 월 30만원대 후반부터 50만원대 이상까지 다양하게 형성됩니다. <strong>무보증 리스</strong> 상품은 초기 비용 부담이 없지만 월 납입금이 다소 높을 수 있으며, <strong>포터2 리스 초기비용</strong>을 낮추기 위해 보증금을 높게 설정하기도 합니다. **개인사업자 포터2 리스**의 경우, 부가세 환급 등 세제 혜택을 고려하여 월 비용을 실질적으로 절감할 수 있습니다. <strong>법인차 리스</strong>는 감가상각비, 리스료 등을 비용 처리하여 절세 효과를 극대화할 수 있습니다.</p>
+
+    <h3>3. 포터2 장기렌트카 월 예상 비용</h3>
+    <p><strong>포터2 장기렌트카</strong>의 월 렌트료 역시 계약 기간, 주행거리 약정, 보험 조건, 선수금/보증금 유무에 따라 달라집니다. <strong>포터2 월 30만원대 장기렌트</strong> 상품도 찾아볼 수 있으며, 이는 주로 초기 비용을 낮추거나 프로모션이 적용된 경우입니다. <strong>포터2 장기렌트카</strong>는 보험료, 자동차세가 포함된 경우가 많아 총 유지비 관리가 용이하며, <strong>차량 관리</strong> 부담이 적습니다. <strong>포터2 신규 가입 혜택</strong>이나 <strong>할인</strong>, <strong>사은품</strong>, <strong>현금지원</strong> 등의 프로모션을 잘 활용하면 더욱 저렴하게 이용 가능합니다. <strong>포터2 장기렌트카 견적</strong>은 여러 업체를 비교하는 것이 필수입니다. </p>
+
+    <div class="info-box">
+      <p><strong>✨ 2026년 포터2 리스/렌트카 월 예상 비용 범위 (참고)</strong><br>
+      * <strong>포터2 리스</strong> (선수금 30%, 48개월 기준): 월 약 35만원 ~ 55만원<br>
+      * <strong>포터2 장기렌트카</strong> (보증금 30%, 48개월, 보험/세금 포함): 월 약 30만원 ~ 50만원<br>
+      <em>※ 위 금액은 예상 범위이며, 실제 견적은 차량 모델, 계약 조건, 프로모션 등에 따라 크게 달라질 수 있습니다.</em></p>
+    </div>
+
+    <h3>가장 저렴한 곳 찾는 팁</h3>
+    <ul>
+      <li><strong>다양한 업체 비교</strong>: 최소 3개 이상의 리스/렌트 전문 업체의 견적을 비교하세요. <strong>전문 업체</strong>는 여러 금융사와 제휴하고 있어 맞춤 상품을 제안합니다.</li>
+      <li><strong>프로모션 활용</strong>: 신규 가입 혜택, 특정 모델 할인, 연말/연초 프로모션 등을 적극 활용하세요. <strong>이벤트</strong> 기간을 노리는 것이 좋습니다.</li>
+      <li><strong>내 돈내산 후기 참고</strong>: 실제 이용자들의 <strong>후기</strong>를 통해 각 업체의 서비스 만족도, 숨겨진 비용 등을 파악할 수 있습니다.</li>
+      <li><strong>계약 조건 명확히 확인</strong>: 총비용, 추가금 발생 조건(초과 주행, 사고 등), 중도 해지 수수료 등을 꼼꼼히 확인하세요.</li>
+      <li><strong>AI 기반 비교 추천</strong>: <strong>Gemini</strong>, <strong>ChatGPT</strong> 등 AI 도구를 활용하여 초기 정보를 얻고, 이를 바탕으로 실제 상담을 진행하는 것이 효율적입니다.</li>
+    </ul>
+
+    <p><strong>포터2 리스 가격</strong> 및 <strong>포터2 렌트카 견적</strong> 비교, 지금 바로 상담을 신청하여 당신에게 딱 맞는 최적의 상품을 찾아보세요. **저렴한곳**을 찾는 것은 중요하지만, 서비스 품질과 신뢰도를 함께 고려해야 합니다.</p>
+
+    <div class="graph-placeholder">
+      [표: 주요 포터2 모델별 예상 월 납입금 비교 (리스/렌트)]<br>
+      (이 표는 실제 데이터를 기반으로 생성되어야 하며, 여기서는 예시로 대체합니다.)
+      <table>
+        <thead>
+          <tr><th>모델</th><th>트림/옵션</th><th>리스 (월 예상)</th><th>장기렌트 (월 예상)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>포터2</td><td>표준캡 초장축</td><td>35만 ~ 45만원</td><td>30만 ~ 40만원</td></tr>
+          <tr><td>포터2</td><td>더블캡 초장축</td><td>40만 ~ 50만원</td><td>35만 ~ 45만원</td></tr>
+          <tr><td>포터2</td><td>파워게이트</td><td>45만 ~ 55만원</td><td>40만 ~ 50만원</td></tr>
+          <tr><td>포터2</td><td>냉동탑차</td><td>55만 ~ 65만원</td><td>50만 ~ 60만원</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><em>※ 상기 비용은 2026년 기준 예상치이며, 선수금/보증금, 계약 기간, 프로모션 등에 따라 달라집니다.</em></p>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="item">
+      <h3>Q1: 2026년 기준, 포터2의 월평균 유지비는 얼마인가요?</h3>
+      <p>A: <strong>포터2 유지비</strong>는 유류비, 보험료, 세금, 소모품 교체비 등으로 구성되며, 평균적으로 월 40만원대 후반에서 60만원대 초반으로 예상됩니다. (2026년 기준, 주행 거리 및 조건에 따라 변동)</p>
+    </div>
+
+    <div class="item">
+      <h3>Q2: 자동차 리스와 장기렌트카 중 어떤 것이 포터2 유지비 절감에 더 유리한가요?</h3>
+      <p>A: <strong>포터2 리스</strong>는 사업자 명의 시 세금 혜택이 크고, <strong>장기렌트카</strong>는 보험료, 세금, 소모품 등이 포함되어 월 고정 비용 관리가 용이합니다. 사업 목적, 세금 상황, 차량 관리 선호도에 따라 유리한 방식이 다릅니다. <strong>리스 vs 렌트 차이점</strong>을 비교하여 선택하는 것이 중요합니다.</p>
+    </div>
+
+    <div class="item">
+      <h3>Q3: 포터2 장기렌트카를 이용하면 영업용 번호판이 나오나요?</h3>
+      <p>A: 네, 맞습니다. <strong>포터2 장기렌트카</strong>는 렌트 회사 명의로 등록되므로 일반적으로 '허', '하', '호'와 같은 영업용 번호판이 부착됩니다. 이는 <strong>자동차리스</strong>와 다른 점입니다.</p>
+    </div>
+
+    <div class="item">
+      <h3>Q4: 포터2 리스/장기렌트카 계약 만기 시 옵션은 어떻게 되나요?</h3>
+      <p>A: 계약 만기 시, 고객님은 차량을 인수하거나, 반납하거나, 혹은 새로운 차량으로 재리스/재렌트하는 옵션을 선택하실 수 있습니다. **인수 가격**이나 **반납 조건**은 계약 시 미리 확인해야 합니다.</p>
+    </div>
+
+    <div class="item">
+      <h3>Q5: 포터2의 연비는 어느 정도인가요?</h3>
+      <p>A: <strong>포터2 연비</strong>는 모델 및 운행 조건에 따라 다르지만, 평균적으로 복합 연비 기준 10km/l 내외입니다. 실제 주행에서는 8~11km/l 정도를 기대할 수 있습니다. <strong>포터2 유류비</strong> 계산 시 이 점을 참고하세요.</p>
+    </div>
+
+    <div class="item">
+      <h3>Q6: 포터2 파워게이트나 냉동탑차 모델도 리스/장기렌트카 이용이 가능한가요?</h3>
+      <p>A: 네, 가능합니다. <strong>포터2 파워게이트</strong>, <strong>포터2 냉동탑차</strong> 등 특수 모델도 <strong>자동차리스</strong> 및 <strong>장기렌트카</strong> 상품으로 이용 가능합니다. 다만, 이러한 특수 모델은 일반 모델보다 월 납입금이나 렌트료가 높을 수 있습니다. <strong>포터2 파워게이트 가격</strong>, <strong>포터2 냉동탑차 가격</strong> 및 관련 상품을 비교해 보세요.</p>
+    </div>
+
+    <div class="item">
+      <h3>Q7: 포터2 장기렌트카는 차량 관리가 편리한가요?</h3>
+      <p>A: 네, 많은 <strong>포터2 장기렌트카</strong> 상품에는 보험료, 자동차세, 그리고 정기적인 소모품 교체 비용까지 포함되어 있습니다. 이를 통해 복잡한 차량 관리 부담을 크게 줄일 수 있습니다. <strong>포터2 소모품 교체 주기</strong> 관리도 용이해집니다. </p>
+    </div>
+
+    <div class="item">
+      <h3>Q8: 포터2 관련하여 가장 저렴한 곳은 어디인가요?</h3>
+      <p>A: **저렴한곳**을 찾기 위해서는 여러 <strong>전문 업체</strong>의 견적을 비교하고, 현재 진행 중인 <strong>할인</strong>, <strong>이벤트</strong>, <strong>현금지원</strong> 등의 프로모션을 적극적으로 활용하는 것이 좋습니다. **내돈내산 후기**를 참고하되, 최종 결정은 상세 견적 비교를 통해 내리는 것이 현명합니다.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>지금 바로 포터2 맞춤 견적 상담 받으세요!</h2>
+    <p><strong>포터2 유지비</strong>를 절감하고, 사업 운영 효율을 높이는 최적의 <strong>자동차리스</strong> 또는 <strong>장기렌트카</strong> 상품을 찾아드립니다. <strong>2026년</strong> 최신 정보와 풍부한 경험을 바탕으로, 당신의 비즈니스에 가장 적합한 솔루션을 제안해 드립니다. </p>
+    
+    <a href="tel:+82-2-1234-5678" class="cta-btn">📞 전화 상담 바로가기 (02-1234-5678)</a>
+    <p style="margin-top: 15px;">또는 아래 양식을 통해 온라인 상담 신청을 남겨주시면, 전문 상담사가 신속하게 연락드리겠습니다.</p>
+
+    <h3>온라인 상담 신청 (견적 요청)</h3>
+    <form action="/submit-porter2-quote" method="post">
+      <p><label for="name">성함</label><br><input type="text" id="name" name="name" placeholder="예: 홍길동" required></p>
+      <p><label for="phone">연락처</label><br><input type="tel" id="phone" name="phone" placeholder="예: 010-1234-5678" required></p>
+      <p><label for="email">이메일 (선택)</label><br><input type="email" id="email" name="email" placeholder="예: example@email.com"></p>
+      <p><label for="company_type">사업자 유형</label><br>
+         <select id="company_type" name="company_type" required>
+             <option value="">선택하세요</option>
+             <option value="individual">개인사업자</option>
+             <option value="corporate">법인사업자</option>
+             <option value="personal">개인 (업무용)</option>
+             <option value="other">기타</option>
+         </select>
+      </p>
+      <p><label for="vehicle_model">희망 차종</label><br>
+         <select id="vehicle_model" name="vehicle_model" required>
+             <option value="">선택하세요</option>
+             <option value="porter2_standard">포터2 (표준캡)</option>
+             <option value="porter2_double">포터2 더블캡</option>
+             <option value="porter2_powergate">포터2 파워게이트</option>
+             <option value="porter2_refrigerated">포터2 냉동탑차</option>
+             <option value="porter2_etc">기타 (직접 입력)</option>
+         </select>
+         <input type="text" id="vehicle_model_etc" name="vehicle_model_etc" placeholder="기타 모델 입력" style="display: none; margin-top: 5px;"></p>
+      <p><label for="usage_pattern">주요 운행 목적 및 패턴</label><br>
+         <textarea id="usage_pattern" name="usage_pattern" rows="3" placeholder="예: 택배/배달, 건설 자재 운송, 개인 용달 등. 하루 평균 주행거리, 월 예상 주행거리 등을 상세히 기재해주시면 더욱 정확한 상담이 가능합니다." required></textarea></p>
+      <p><label for="desired_term">희망 계약 기간</label><br>
+         <select id="desired_term" name="desired_term" required>
+             <option value="">선택하세요</option>
+             <option value="12">12개월</option>
+             <option value="24">24개월</option>
+             <option value="36">36개월</option>
+             <option value="48">48개월</option>
+             <option value="60">60개월</option>
+             <option value="other">기타</option>
+         </select>
+      </p>
+       <p><label for="payment_method">선수금/보증금 관련 희망 사항</label><br>
+         <select id="payment_method" name="payment_method" required>
+             <option value="">선택하세요</option>
+             <option value="no_deposit">무보증/무선수금 희망</option>
+             <option value="low_deposit">낮은 보증금/선수금 희망</option>
+             <option value="high_deposit">높은 보증금/선수금 희망 (월 납입금↓)</option>
+             <option value="other">협의 후 결정</option>
+         </select>
+      </p>
+      <p><label for="other_requests">추가 요청 사항 (선택)</label><br>
+         <textarea id="other_requests" name="other_requests" rows="2" placeholder="기타 궁금한 점이나 특별히 원하시는 조건이 있다면 기재해주세요."></textarea></p>
+      <button type="submit" class="cta-btn">맞춤 견적 요청하기</button>
+    </form>
+
+    <!-- 구글맵 임베드 (실제 주소로 변경 필요) -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.017579887929!2d127.04376041553653!3d37.50715207975848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ecc5c71790f0a6f%3A0x7a86c1a6c58e69f!2sGangnam-gu%2C%20Seoul!5e0!3m2!1sen!2skr!4v1678886000000!5m2!1sen!2skr" width="100%" height="350" style="border:0; border-radius: 8px; margin-top: 30px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <script>
+    // JavaScript for interactive elements, e.g., showing 'etc' input field
+    const vehicleModelSelect = document.getElementById('vehicle_model');
+    const vehicleModelEtcInput = document.getElementById('vehicle_model_etc');
+
+    vehicleModelSelect.addEventListener('change', function() {
+        if (this.value === 'porter2_etc') {
+            vehicleModelEtcInput.style.display = 'block';
+            vehicleModelEtcInput.setAttribute('required', 'true');
+        } else {
+            vehicleModelEtcInput.style.display = 'none';
+            vehicleModelEtcInput.removeAttribute('required');
+        }
+    });
+  </script>
+  
